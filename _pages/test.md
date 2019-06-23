@@ -1,6 +1,7 @@
 ---
+permalink: "/custom/"
 layout: page
-title: Custom Page
+title:  "Custom"
 subtitle: Each post also has a subtitle
 tags: [test]
 comments: true
