@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Custom Page
 subtitle: Each post also has a subtitle
 tags: [test]
