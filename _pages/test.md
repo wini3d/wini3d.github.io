@@ -7,14 +7,4 @@ tags: [test]
 comments: true
 ---
 
-## Here is a secondary heading
-
-## Here is a secondary heading
-
-## Here is a secondary heading
-
-## Here is a secondary heading
-
-## Here is a secondary heading
-
-## Here is a secondary heading
+### This is a Custom page under _pages
