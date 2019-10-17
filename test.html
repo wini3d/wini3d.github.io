@@ -28,7 +28,18 @@ function errorHandler(e) {
 
 
 window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
-window.requestFileSystem(window.TEMPORARY, 5*1024*1024 /*5MB*/, onInitFs, errorHandler);
+//window.requestFileSystem(window.TEMPORARY, 5*1024*1024 /*5MB*/, onInitFs, errorHandler);
+
+
+var requestedBytes = 1024*1024; 
+
+navigator.webkitPersistentStorage.requestQuota (
+    requestedBytes, function(grantedBytes) {
+				console.log('we were granted ', grantedBytes, 'bytes');  
+        window.webkitRequestFileSystem(PERSISTENT, grantedBytes, onInitFs, errorHandler); 
+
+    }, function(e) { console.log('Error', e); }
+);
 
 function onInitFs(fs) {
 
@@ -55,6 +66,7 @@ function onInitFs(fs) {
   }, errorHandler);
 
 }
+
 
 
 </script>
